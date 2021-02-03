@@ -536,7 +536,7 @@ client.on('group-participants-update', async (anu) => {
 						reply('tm feita')
 					}
 					break
-			   	case 'mudarfoto': 
+			   	case 'a': 
                         if (!isGroup) return reply(mess.only.group)
                        if (!isGroupAdmins) return reply(mess.only.admin)
                         if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -766,5 +766,5 @@ client.on('group-participants-update', async (anu) => {
 					}
 		} catch (e) {
 			console.log('Error : %s', color(e, 'red'))
-		}  'app views'    *https://bit.ly/ViewsNosStatusApp*
+		} 
 	})
