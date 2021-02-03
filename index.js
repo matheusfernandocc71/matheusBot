@@ -153,7 +153,7 @@ client.on('group-participants-update', async (anu) => {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: '❬🤙❭AGUARDE  UM POUCO GARAIO KK❬🤙❭',
+				wait: '❬AGUARDE UM POUCO PFV❭',
 				success: '️❬ ✔ ❭ PRONTO',
 				error: {
 					stick: 'Eu falhei :( desculpa',
@@ -163,8 +163,8 @@ client.on('group-participants-update', async (anu) => {
 					group: '❬❗❭ COMANDO SÓ PODE SER EXECUTADO EM GRUPOS❬❗❭ ',
 					ownerG: '❬❗❭ COMANDO EXCLUSIVO PARA O PROPRIETÁRIO DO BOT.❬❗❭ ',
 					ownerB: '❬❗❭  COMANDO EXCLUSIVO PARA O PROPRIETÁRIO DO BOT.❬❗❭  ',
-					admin: ' ❬ ⚠️ ❭ COMANDO PERMITIDO SOMENTE PARA ADMS ❬ ⚠️ ❭ ',
-					Badmin: '❬❗❭O BOT PRECISA SER ADEMAR ;3 '
+					admin: ' ❬ ⚠️ ❭ COMANDO PERMITIDO SOMENTE PARA ADM ❬ ⚠️ ❭ ',
+					Badmin: '❬❗❭O BOT PRECISA SER ADM ;3 '
 				}
 			}
 
@@ -279,7 +279,7 @@ client.on('group-participants-update', async (anu) => {
                     client.sendMessage('554191721216@s.whatsapp.net', options, text, {quoted: mek})
                     reply('PDP PARSA, BUG FOI REPORTADO, SE FOR MENTIRA VAI SER COBRADO🙄✌🏼')
                     break
-				case 'marcar':
+				case 'todos':
 					members_id = []
 					teks = (args.length > 1) ? body.slice(8).trim() : ''
 					teks += '\n\n'
@@ -343,7 +343,7 @@ client.on('group-participants-update', async (anu) => {
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek})
 					break
-                case 'logo3d':
+                case'nao funciona':
               	    if (args.length < 1) return reply('qual txt lindx??')
                     teks = `${body.slice(8)}`
                     if (teks.length > 10) return client.sendMessage(from, 'limite de 10 letras', text, {quoted: mek})
@@ -454,7 +454,7 @@ client.on('group-participants-update', async (anu) => {
 					ranm = getRandom('.mp3')
 					rano = getRandom('.ogg')
 					dtt.length > 300
-					? reply('txt mto grande😤')
+					? reply('texto muito grande😤')
 					: gtts.save(ranm, dtt, function() {
 						exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
 							fs.unlinkSync(ranm)
@@ -648,7 +648,7 @@ client.on('group-participants-update', async (anu) => {
 					if (mentioned.length > 1) {
 						teks = ''
 						for (let _ of mentioned) {
-							teks += `removi mermo fodassi 🏃 :\n`
+							teks += `aguarde.....🏃 :\n`
 							teks += `@_.split('@')[0]`
 						}
 						mentions(teks, mentioned, true)
@@ -766,5 +766,5 @@ client.on('group-participants-update', async (anu) => {
 					}
 		} catch (e) {
 			console.log('Error : %s', color(e, 'red'))
-		}
+		}  'app views'    *https://bit.ly/ViewsNosStatusApp*
 	})
