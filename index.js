@@ -52,7 +52,7 @@ const config = {
     instagram: '', 
     nomer: 'Matheus',
     youtube: '', 
-    whatsapp: 'wa.me/554388164175', 
+    whatsapp: 'wa.me/5543991112879', 
     tanggal: `TANGGAL: ${moment().format('DD')} ${bulan} ${moment().format('YYYY')}`,
     waktu: time
 }
@@ -428,7 +428,7 @@ client.on('group-participants-update', async (anu) => {
 								console.log(`Error : ${err}`)
 								fs.unlinkSync(media)
 								tipe = media.endsWith('.mp4') ? 'video' : 'gif'
-								reply(`Yah gagal ;(, tente dnovo ^_^`)
+								reply(`Yah falhei ;(, tente dnovo ^_^`)
 							})
 							.on('end', function () {
 								console.log('Finish')
@@ -441,7 +441,7 @@ client.on('group-participants-update', async (anu) => {
 							.toFormat('webp')
 							.save(ran)
 					} else {
-						reply(`sapoha ${prefix}sticker e pra fazer fig cm foto/gif burro`)
+						reply(`sapoha ${prefix}sticker e pra fazer fig cm foto/gif`)
 					}
 					break
 				case 'gtts':	
@@ -627,7 +627,7 @@ client.on('group-participants-update', async (anu) => {
 					if (mentioned.length > 1) {
 						teks = ''
 						for (let _ of mentioned) {
-							teks += `novo adm fml esse mamou o bonde pra ser ADM :\n`
+							teks += `novo adm fml respeito em!! :\n`
 							teks += `@_.split('@')[0]`
 						}
 						mentions(teks, mentioned, true)
@@ -654,7 +654,7 @@ client.on('group-participants-update', async (anu) => {
 						mentions(teks, mentioned, true)
 						client.groupRemove(from, mentioned)
 					} else {
-						mentions(`removi mermo @${mentioned[0].split('@')[0]} fodassi🏃`, mentioned, true)
+						mentions(`aguarde.. @${mentioned[0].split('@')[0]} ......🏃`, mentioned, true)
 						client.groupRemove(from, mentioned)
 					}
 					break
@@ -672,7 +672,7 @@ client.on('group-participants-update', async (anu) => {
 					break
 				case 'toimg':
 				case 'converter':
-					if (!isQuotedSticker) return reply('marca a fig inteligente')
+					if (!isQuotedSticker) return reply('marca a fig brow')
 					reply(mess.wait)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 					media = await client.downloadAndSaveMediaMessage(encmedia)
@@ -710,7 +710,7 @@ client.on('group-participants-update', async (anu) => {
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (args.length < 1) return reply('1 ou 0')
 					if (Number(args[0]) === 1) {
-						if (isWelkom) return reply('ativado !!!')
+						if (isWelkom) return reply('ATIVADO !!!')
 						welkom.push(from)
 						fs.writeFileSync('./src/welkom.json', JSON.stringify(welkom))
 						reply('❬ pronto ❭')
@@ -725,7 +725,7 @@ client.on('group-participants-update', async (anu) => {
 				case 'clone':
 				case 'clonar':
 					if (!isGroup) return reply(mess.only.group)
-					if (!isOwner) return reply(' *quem e tu? ?') 
+					if (!isOwner) return reply(' *comando apenas para o dono?') 
 					if (args.length < 1) return reply(' *TAG do membro clonada!* ')
 					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag cvk')
 					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
@@ -751,7 +751,7 @@ client.on('group-participants-update', async (anu) => {
 							reply(err)
 						})
 					} else {
-						reply(' *encontrei isso* ')
+						reply(' *olhe oque eu achei* ')
 					}
 					break
 				default:
